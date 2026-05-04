@@ -172,7 +172,7 @@ export async function createInitialHelpMenu(client) {
         .setURL("https://discord.gg/8XHSMAXdk")
         .setStyle(ButtonStyle.Link);
 
-    const Winter monarch button= new ButtonBuilder()
+    const Wintermonarchbutton= new ButtonBuilder()
         .setLabel("Larn fron winter monarch")
         .setURL("https://discord.gg/8XHSMAXdk")
         .setStyle(ButtonStyle.Link);
