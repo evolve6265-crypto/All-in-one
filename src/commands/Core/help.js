@@ -160,31 +160,7 @@ export async function createInitialHelpMenu(client) {
     });
     embed.setTimestamp();
 
-    const bugReportButton = new ButtonBuilder()
-        .setCustomId(BUG_REPORT_BUTTON_ID)
-        .setLabel("Report Bug")
-        .setStyle(ButtonStyle.Danger);
-
-    const supportButton = new ButtonBuilder()
-        .setLabel("Support Server")
-        .setURL("")
-        .setStyle(ButtonStyle.Link);
-
-    const Wintermonarchbutton= new ButtonBuilder()
-        .setLabel("Larn fron winter monarch")
-        .setURL("https://discord.gg/8XHSMAXdk")
-        .setStyle(ButtonStyle.Link);
-
-    const selectRow = createSelectMenu(
-        CATEGORY_SELECT_ID,
-        "Select to view the commands",
-        options,
-    );
-
-    const buttonRow = new ActionRowBuilder().addComponents([
-        bugReportButton,
-        supportButton,
-        winterMonarchButton,
+    
     ]);
 
     return {
