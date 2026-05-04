@@ -18,23 +18,24 @@ const CATEGORY_SELECT_ID = "help-category-select";
 const ALL_COMMANDS_ID = "help-all-commands";
 const HELP_MENU_TIMEOUT_MS = 5 * 60 * 1000;
 
+// Cool vibes emojis
 const CATEGORY_ICONS = {
-    Core: "ℹ️",
-    Moderation: "🛡️",
-    Economy: "💰",
-    Fun: "🎮",
-    Leveling: "📊",
-    Utility: "🔧",
-    Ticket: "🎫",
-    Welcome: "👋",
-    Giveaway: "🎉",
-    Counter: "🔢",
-    Tools: "🛠️",
-    Search: "🔍",
+    Core: "💠",
+    Moderation: "⚔️",
+    Economy: "💸",
+    Fun: "🕹️",
+    Leveling: "⚡",
+    Utility: "🛠️",
+    Ticket: "🏷️",
+    Welcome: "✨",
+    Giveaway: "🎁",
+    Counter: "⏱️",
+    Tools: "🧲",
+    Search: "👁️‍🗨️",
     Reaction_Roles: "🎭",
-    Community: "👥",
-    Birthday: "🎂",
-    Config: "⚙️",
+    Community: "🪐",
+    Birthday: "🎊",
+    Config: "🎛️",
 };
 
 export async function createInitialHelpMenu(client) {
@@ -56,7 +57,7 @@ export async function createInitialHelpMenu(client) {
             const categoryName =
                 category.charAt(0).toUpperCase() +
                 category.slice(1).toLowerCase();
-            const icon = CATEGORY_ICONS[categoryName] || "🔍";
+            const icon = CATEGORY_ICONS[categoryName] || "💠";
             return {
                 label: `${icon} ${categoryName}`,
                 description: `View commands in the ${categoryName} category`,
@@ -66,70 +67,72 @@ export async function createInitialHelpMenu(client) {
     ];
 
     const botName = client?.user?.username || "Bot";
+    
+    // Clean but aesthetic embed
     const embed = createEmbed({ 
-        title: `🤖 ${botName} Help Center`,
+        title: `✨ ${botName} Help Center`,
         description: "Your all-in-one Discord companion for moderation, economy, fun, and server management.",
         color: 'primary'
     });
 
     embed.addFields(
         {
-            name: "🛡️ **Moderation**",
+            name: "⚔️ **Moderation**",
             value: "Server moderation, user management, and enforcement tools",
             inline: true
         },
         {
-            name: "💰 **Economy**",
+            name: "💸 **Economy**",
             value: "Currency system, shops, and virtual economy",
             inline: true
         },
         {
-            name: "🎮 **Fun**",
+            name: "🕹️ **Fun**",
             value: "Games, entertainment, and interactive commands",
             inline: true
         },
         {
-            name: "📊 **Leveling**",
+            name: "⚡ **Leveling**",
             value: "User levels, XP system, and progression tracking",
             inline: true
         },
         {
-            name: "🎫 **Tickets**",
+            name: "🏷️ **Tickets**",
             value: "Support ticket system for server management",
             inline: true
         },
         {
-            name: "🎉 **Giveaways**",
+            name: "🎁 **Giveaways**",
             value: "Automated giveaway management and distribution",
             inline: true
         },
         {
-            name: "👋 **Welcome**",
+            name: "✨ **Welcome**",
             value: "Member welcome messages and onboarding",
             inline: true
         },
         {
-            name: "🎂 **Birthdays**",
+            name: "🎊 **Birthdays**",
             value: "Birthday tracking and celebration features",
             inline: true
         },
         {
-            name: "👥 **Community**",
+            name: "🪐 **Community**",
             value: "Community tools, applications, and member engagement",
             inline: true
         },
         {
-            name: "⚙️ **Config**",
+            name: "🎛️ **Config**",
             value: "Server and bot configuration management commands",
             inline: true
         },
         {
-            name: "🔢 **Counter**",
+            name: "⏱️ **Counter**",
             value: "Live counter channel setup and counter controls",
             inline: true
         },
         {
-            name: "🎙️ **Join to Create**",
+            name: "🎧 **Join to Create**",
             value: "Dynamic voice channel creation and management",
             inline: true
         },
@@ -139,12 +142,12 @@ export async function createInitialHelpMenu(client) {
             inline: true
         },
         {
-            name: "✅ **Verification**",
+            name: "🛡️ **Verification**",
             value: "Member verification workflows and access gating",
             inline: true
         },
         {
-            name: "🔧 **Utilities**",
+            name: "🛠️ **Utilities**",
             value: "Useful tools and server utilities",
             inline: true
         }
@@ -154,7 +157,7 @@ export async function createInitialHelpMenu(client) {
 
     const selectRow = createSelectMenu(
         CATEGORY_SELECT_ID,
-        "Select to view the commands",
+        "Select to view the commands ✦",
         options,
     );
 
@@ -184,8 +187,8 @@ export default {
         setTimeout(async () => {
             try {
                 const closedEmbed = createEmbed({
-                    title: "Help menu closed",
-                    description: "Help menu has been closed, use /help again.",
+                    title: "✨ Help Menu Closed",
+                    description: "The help session has timed out. Use `/help` to open it again.",
                     color: "secondary",
                 });
 
@@ -194,7 +197,7 @@ export default {
                     components: [],
                 });
             } catch (error) {
-                
+                // Silently handle timeout edit errors
             }
         }, HELP_MENU_TIMEOUT_MS);
     },
