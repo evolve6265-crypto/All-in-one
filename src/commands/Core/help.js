@@ -158,7 +158,7 @@ export async function createInitialHelpMenu(client) {
     );
 
     embed.setFooter({ 
-        text: "Made with ❤️" 
+        text: "Aurelia" 
     });
     embed.setTimestamp();
 
@@ -169,12 +169,12 @@ export async function createInitialHelpMenu(client) {
 
     const supportButton = new ButtonBuilder()
         .setLabel("Support Server")
-        .setURL("https://discord.gg/QnWNz2dKCE")
+        .setURL("https://discord.gg/8XHSMAXdk")
         .setStyle(ButtonStyle.Link);
 
-    const touchpointButton = new ButtonBuilder()
-        .setLabel("Learn from Touchpoint")
-        .setURL("https://www.youtube.com/@TouchDisc")
+    const Winter monarch button= new ButtonBuilder()
+        .setLabel("Larn fron winter monarch")
+        .setURL("https://discord.gg/8XHSMAXdk")
         .setStyle(ButtonStyle.Link);
 
     const selectRow = createSelectMenu(
@@ -186,7 +186,7 @@ export async function createInitialHelpMenu(client) {
     const buttonRow = new ActionRowBuilder().addComponents([
         bugReportButton,
         supportButton,
-        touchpointButton,
+        winterMonarchButton,
     ]);
 
     return {
