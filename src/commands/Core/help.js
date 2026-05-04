@@ -42,8 +42,6 @@ const CATEGORY_ICONS = {
 
 
 
-
-
 export async function createInitialHelpMenu(client) {
     const commandsPath = path.join(__dirname, "../../commands");
     const categoryDirs = (
