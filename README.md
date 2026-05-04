@@ -12,7 +12,7 @@
 - [🚀 Quick Setup](#quick-setup)
 - [⚙️ Manual Installation Steps](#manual-installation-steps)
 - [🗄️ Database System](#database-system)
-- [🌐 Support Server](https://discord.gg/QnWNz2dKCE)
+- [🌐 Support Server](https://discord.gg/8XHSMAXdk)
 - [🏗️ Bot Architecture](#bot-architecture)
 - [🤝 Contributing](#contributing)
 
