@@ -1,4 +1,4 @@
-﻿import {
+import { 
     SlashCommandBuilder,
     ActionRowBuilder,
     ButtonBuilder,
@@ -169,7 +169,7 @@ export async function createInitialHelpMenu(client) {
 
     const supportButton = new ButtonBuilder()
         .setLabel("Support Server")
-        .setURL("https://discord.gg/8XHSMAXdk")
+        .setURL("")
         .setStyle(ButtonStyle.Link);
 
     const Wintermonarchbutton= new ButtonBuilder()
